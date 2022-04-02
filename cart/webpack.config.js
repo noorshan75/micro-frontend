@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = {
     mode: "development",
-   // entry: "./src/index.js",
+    //entry: "./src/index.js",
     // and webpack starts bundling
     /*output: {
         // options related to how webpack emits results
@@ -15,15 +15,15 @@ module.exports = {
     },*/
     //initialize dev server with port
     devServer: {
-        port: 8080
+        port: 8081
     },
     plugins: [
         //ModuleFederationPlugin
         new ModuleFederationPlugin({
-            name: 'container',
-            remotes: {
-                products: "products@http://localhost:8080/remoteEntry.js",
-                cart: "cart@http://localhost:8081/remoteEntry.js"
+            name: 'cart',
+            filename: 'remoteEntry.js',
+            exposes: {
+                "./CartShow": "./src/index"
             }
 
         }),
