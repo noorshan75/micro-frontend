@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\container",
+    "\\container\\public",
+    "\\container\\src",
+    "\\products",
+    "\\products\\public",
+    "\\products\\src"
+  ],
+  "SelectedNode": "\\container\\webpack.config.js",
+  "PreviewInSolutionExplorer": false
+}
